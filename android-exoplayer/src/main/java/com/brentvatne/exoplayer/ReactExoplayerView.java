@@ -835,6 +835,7 @@ class ReactExoplayerView extends FrameLayout implements
                         errorString = getResources().getString(R.string.error_no_decoder,
                                 decoderInitializationException.mimeType);
                     }
+                    MediaCodecRenderer.flushOrReinitializeCodec();
                 } else {
                     errorString = getResources().getString(R.string.error_instantiating_decoder,
                             decoderInitializationException.decoderName);
